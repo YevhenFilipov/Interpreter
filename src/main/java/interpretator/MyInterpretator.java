@@ -4,7 +4,7 @@ import command.Command;
 import commands_factory.CommandsFactory;
 
 /**
- * Created by Admin on 06.10.2014.
+ *
  */
 public class MyInterpretator {
     public static char[] arr = new char[30000];
@@ -17,6 +17,7 @@ public class MyInterpretator {
     }
 
     public void executeCode() {
+
         while (currPositionInCode < code.length()) {
             CommandsFactory commandsFactory = new CommandsFactory(code, currPositionInCode);
             Command currCommand = commandsFactory.getCommand(code.charAt(currPositionInCode));
